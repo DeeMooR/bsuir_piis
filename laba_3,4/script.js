@@ -91,11 +91,7 @@ const createCard = (item) => {
 
   const img = document.createElement('img');
   img.className = 'card__image';
-  img.src = item.colors.white.front;
-  img.onerror = () => {
-    img.src = item.default.front;
-    console.log('Ошибка: картинка не найдена, загружена картинка по умолчанию.');
-  };
+  setImage(img, item.colors.white.front, item.default.front)
   card.appendChild(img);
 
   const info = document.createElement('div');
@@ -129,6 +125,10 @@ const createCard = (item) => {
   list.appendChild(card);
 
   btnQuickView.addEventListener('click', () => displayView(item));
+  btnSeePage.addEventListener('click', () => {
+    localStorage.setItem('item', JSON.stringify(item));
+    window.location.href = './detail.html';
+  });
 }
 
 const fillList = () => {

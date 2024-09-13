@@ -18,6 +18,17 @@ button:hover {
   background-color: rgb(124, 161, 231);
 }
 
+a {
+  display: block;
+  width: fit-content;
+  color: rgb(43, 105, 220);
+  transition: all 0.1s ease-in-out 0s;
+  padding: 3px;
+}
+a:hover {
+  color: rgb(120, 160, 234);
+}
+
 .wrapper {
   max-width: 1080px;
   margin: 0 auto;
@@ -97,4 +108,30 @@ button:hover {
   .shirts__item {
     width: 100%;
   }
+}
+
+/* ------------------------------------- */
+
+.page__crumbs {
+  margin: 20px 0;
+}
+.page__content {
+  display: flex;
+  gap: 40px;
+}
+.page__sides {
+  margin: 100px 0 10px;
+}
+.page__buttons {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px;
+}
+.page__button {
+  max-width: 100px;
+  transition: all 0.1s ease-in-out 0s;
+}
+.page__button:hover {
+  opacity: 0.7;
 }
